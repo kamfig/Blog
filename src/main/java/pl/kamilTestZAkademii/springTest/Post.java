@@ -1,16 +1,28 @@
 package pl.kamilTestZAkademii.springTest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Post {
     private String title;
     private String descripton;
     private String author;
 
+    private static List<Post> posts=new ArrayList<>();
+
+    public static List<Post> findAll(){
+        return posts;
+    }
+
     public Post(String title, String descripton, String author) {
         this.title = title;
         this.descripton = descripton;
         this.author = author;
+        posts.add(this);
     }
-    public Post(){}
+    public Post(){
+        posts.add(this);
+    }
 
     public String getTitle() {
         return title;
@@ -38,10 +50,10 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
-                "title='" + title + '\'' +
-                ", descripton='" + descripton + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return "Post Brzmi {" +
+                "title=' " + title + '\'' +
+                ", descripton=' \n  " + descripton + '\'' +
+                ", author=' " + author + '\'' +
+                "  ! }";
     }
 }

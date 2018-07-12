@@ -5,11 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Dodano Kolejny zacny post</h1>
-<article th:text="${post}"/>
-<!--<p th:text="${post.authr}"/> -->
+<h1 th:text="${mem.title}"></h1>
+<img th:src="${mem.imageUrl}">
 
-<a href="/">Wroc</a>
-<a href="/all">Wszystkie Posty!</a>
 </body>
 </html>
