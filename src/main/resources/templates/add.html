@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Strona główna</title>
+    <title>Strona główna - dodawanie</title>
 
     <h1>Bardzo ładne Teksty dynamicznie sie Zmieniajacy</h1>
 </head>
-<body>
+<form action="/show" method="get">
+<label>Tytuł</label>
+<input type = "text" name = "title">
+<label>Opis</label>
+<br>
+<textarea rows="4" cols = "50" name = "description"></textarea>
 
+<br>
+<label>Autor Postu</label>
+<input type = "text" name = "author">
+<input type = "submit" value="Dodaj post">
+</form>
 </body>
 </html>
